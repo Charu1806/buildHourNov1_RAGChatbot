@@ -1,0 +1,15 @@
+{
+  "strategy": "section_prefix_v1",
+  "chunk_count": 318,
+  "skipped_docs": 0,
+  "per_scheme": {
+    "HDFC Mutual Fund": 74,
+    "HDFC Large Cap Fund Direct Growth": 56,
+    "HDFC Flexi Cap Direct Plan Growth": 63,
+    "HDFC ELSS Tax Saver Fund Direct Plan Growth": 63,
+    "HDFC Mid Cap Fund Direct Growth": 62
+  },
+  "min_tokens": 44,
+  "median_tokens": 164.0,
+  "max_tokens": 179
+}

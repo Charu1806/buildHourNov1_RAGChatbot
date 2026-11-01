@@ -1,0 +1,16 @@
+pyyaml
+python-dotenv
+httpx
+beautifulsoup4
+lxml
+pypdf
+sentence-transformers
+chromadb
+fastapi
+uvicorn
+groq
+openai
+anthropic
+google-genai
+mistralai
+pytest

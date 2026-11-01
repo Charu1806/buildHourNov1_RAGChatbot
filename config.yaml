@@ -1,0 +1,23 @@
+embedding_model: sentence-transformers/all-MiniLM-L6-v2
+chroma_path: data/chroma
+chroma_collection: hdfc_mf_facts
+chunk_strategy: section_prefix_v1
+chunk_max_tokens: 180
+chunk_overlap_tokens: 40
+top_k: 4
+score_threshold: 0.35
+llm_provider: groq
+llm_temperature: 0.1
+llm_max_tokens: 300
+sources_path: sources.csv
+educational_url: "https://investor.sebi.gov.in/"
+max_answer_sentences: 3
+rebuild_index: false
+allowed_hosts:
+  - groww.in
+  - hdfcfund.com
+  - sebi.gov.in
+  - investor.sebi.gov.in
+  - amfiindia.com
+  - camsonline.com
+  - kfintech.com
