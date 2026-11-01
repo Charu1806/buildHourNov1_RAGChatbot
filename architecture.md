@@ -331,6 +331,8 @@ This split keeps W1 routing outside the model and keeps W2 prompting on the path
 
 FastAPI in `src/app.py`. One static file, `src/static/index.html`. No frontend build.
 
+**Visual source of truth:** `stitch_hdfc_fund_facts_assistant.zip` (Stitch with Google). The zip is a side-by-side bright/dark study. The shipped page is one frame: the dark study. Full-bleed teal night sky (`#042921` to `#063D32`), sparse stars in `#FFFFFF` and `#D9FFF4`, and one frosted card (`#063028` at 88% opacity, max width 640px). Brand green is Groww `#00B386`. Links on the dark card are `#7DFFD9`. Text is `#F4FFFB`. The comparison chrome in the zip (frame labels, dual theme view) is not part of the product page. The page does not load Tailwind, Google Fonts, or any other external host.
+
 | Method | Path | Body |
 | --- | --- | --- |
 | `GET` | `/` | The page |
@@ -380,14 +382,14 @@ Error response, HTTP 503, when Chroma is missing or the provider call fails afte
 }
 ```
 
-The page:
+The page, matching the dark frame in the Stitch zip:
 
-- Title area with the welcome line and the persistent disclaimer directly under it, above the input, on both wide and narrow layouts.
-- Three buttons that only fill the input.
-- Submit on button click or Enter.
-- Answer region renders `sentences`, one anchor for `source`, and the last-updated line.
+- Wordmark `HDFC Mutual Fund Facts`, then the welcome line, then the disclaimer above the input.
+- Three suggested-inquiry buttons that only fill the input.
+- Submit on the Ask button or Enter.
+- Answer card renders `sentences`, one source anchor, and the last-updated line. It stays hidden until a response arrives. The sample answer drawn in the zip is a design placeholder, not shipped copy.
 - `<details>` labeled `How this answer was built`, closed by default, renders `trace`.
-- Before the first successful response, the answer region and the trace stay empty.
+- Before the first successful response, the answer card and the trace stay empty.
 
 The page does not call any host except this app.
 

@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 data/chroma/
 .cache/
+logs/

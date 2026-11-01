@@ -250,13 +250,15 @@ On failure, retry once with the check errors appended. A second failure becomes 
 
 `src/app.py` serves `src/static/index.html` on `127.0.0.1:8000`. No frontend build. The page talks only to its own origin.
 
+**Visual source of truth:** `stitch_hdfc_fund_facts_assistant.zip`. Build the page from the dark frame in that file, not from the side-by-side comparison wrapper. Sky `#042921` → `#063D32` with the star field from `code.html` (`.stars-clear`). One card, max width 640px, fill `rgba(6, 48, 40, 0.88)`, border `#0E6B56`, text `#F4FFFB`, brand button `#00B386`, source link `#7DFFD9`. Do not add the Tailwind or Google Fonts CDN. Inline the CSS. Copy and behavior below stay as specified. The filled answer in the zip is only a mock; the live card stays empty until `/api/ask` returns.
+
 | Method | Path | Role |
 | --- | --- | --- |
 | `GET /` | The page | |
 | `POST /api/ask` | `{"question": "..."}` | |
 | `GET /sources.csv` | Source list linked from the error state | |
 
-Page order, one column, max width `40rem`:
+Page order, one card, max width 640px, on the teal star field:
 
 1. `Ask a factual question about HDFC mutual fund schemes.`
 2. Disclaimer, always above the input: `Facts-only. No investment advice. Answers are short quotations from official public pages, with one source link. This is not a recommendation to buy, sell, or hold any scheme.`
