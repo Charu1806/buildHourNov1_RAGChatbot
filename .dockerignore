@@ -1,0 +1,16 @@
+# Never ship secrets or local build output to Vercel's build context.
+.env
+.git
+.gitignore
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+
+# Rebuilt inside the image by `python -m src.embed`.
+data/chroma
+
+# Ingestion-only inputs, not needed at runtime.
+data/raw
+data/scraped
+tests

@@ -1,6 +1,13 @@
 import pytest
 
+import src.config
 from src.config import load_settings
+
+
+@pytest.fixture(autouse=True)
+def _ignore_real_env_file(monkeypatch):
+    """Keep tests independent of a developer's local .env file."""
+    monkeypatch.setattr(src.config, "load_dotenv", lambda *args, **kwargs: False)
 
 
 def test_offline_settings_load_without_api_key(monkeypatch):

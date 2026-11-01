@@ -28,13 +28,15 @@ def _client(handler) -> httpx.Client:
 
 def test_real_allowlist_has_five_seeds():
     rows = read_sources(Path("sources.csv"))
-    assert [row.id for row in rows] == [
+    seeds = [row.id for row in rows if row.why_included == "seed"]
+    assert seeds == [
         "hdfc-amc",
         "hdfc-large-cap",
         "hdfc-flexi-cap",
         "hdfc-elss",
         "hdfc-mid-cap",
     ]
+    assert any(row.why_included == "education" for row in rows)
 
 
 def test_cap_duplicate_and_http_url_are_rejected(tmp_path: Path):
